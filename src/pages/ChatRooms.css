@@ -1,0 +1,47 @@
+
+/* SPLIT SCREEN FUNCTIONALITY START */
+.splitScreen {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.leftPane {
+    grid-column: 1;
+    grid-row: 1;
+    width: 80%;
+}
+
+.rightPane {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+}
+/* SPLIT SCREEN FUNCTIONALITY END */
+
+
+.message-text {
+    border: 1px solid #800080;
+    border-radius: 5px;
+}
+
+.form-submit-button {
+	background: #7f5bd5;
+	color: white;
+	height: 30px;
+	width: 90px;
+	font: bold15px arial,sans-serif;
+	text-shadow: none;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+
+.form-submit-button:hover {
+	background: #e6e6fa;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+}

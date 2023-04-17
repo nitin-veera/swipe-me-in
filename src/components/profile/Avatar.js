@@ -1,0 +1,20 @@
+import React from 'react'
+import { Avatar as ChakraAvatar } from "@chakra-ui/react"
+import { Link } from "react-router-dom";
+import { PROTECTED } from '../../lib/routes';
+
+export default function Avatar({ user, size="xl", overrideAvatar=null }) {
+    if(!user) return "Loading..."
+
+  return (
+    <ChakraAvatar 
+    as={Link} 
+    to={`${PROTECTED}/profile/${user.id}`} 
+    name={user.username}
+    size={size} 
+    // use the overridedAvatar if it is not null since it comes first 
+    // in the or expression
+    src={overrideAvatar || user.avatar}
+    _hover={{cursor: "pointer", opacity: "0.8"}} />
+  )
+}
